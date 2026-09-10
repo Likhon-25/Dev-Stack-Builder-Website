@@ -1,32 +1,15 @@
-# React + TypeScript + Vite
+1. Name of your project
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+2. A little description
 
-Currently, two official plugins are available:
+3. Technology that you use
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+4. 3 features about your project
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+5. What is JSX, and why is it used in React?
+6. What is the difference between props and state?
+7. What does the useState hook do, and where did you use it in this project?
+8. What does the useEffect hook do, and why did you need it to load the JSON data?
+9. Why does every item in a .map() list need a unique key prop?
+10. What is conditional rendering? Show one place you used it (example: the empty stack message).
+11. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
