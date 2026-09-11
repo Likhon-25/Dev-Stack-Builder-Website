@@ -9,10 +9,22 @@ interface ISelectedTechnologyesProp {
 
 const SelectedTechnologyes = ({selectedTechnologies,setSelectedTechnologies} : ISelectedTechnologyesProp ) => {
     return (
-        <div>
+        <div >
             <h2>Selected Technologies</h2>
-            <p>{selectedTechnologies.length}</p>
-           
+            <p>{selectedTechnologies.length} Technology Selected</p>
+            {
+                selectedTechnologies.map((selectTech) => {
+                    <div>
+                        <div className="card">
+                            <img src={selectTech.icon} alt="" />
+                            <div className="name">
+                                <h2>{selectTech.name}</h2>
+                                <p>{selectTech.category}</p>
+                            </div>
+                        </div>
+                    </div>
+                })
+            }
                        
         </div>
     );
