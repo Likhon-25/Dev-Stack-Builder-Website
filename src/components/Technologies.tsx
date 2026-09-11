@@ -16,7 +16,7 @@ const Technologies = ({ TechnologyPromise }: TechnologyProps) => {
     <div className="container mx-auto px-4 py-8">
       <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
         Explore the{" "}
-        <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+        <span className="bg-linear-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
           Technologies
         </span>
       </h2>
