@@ -13,13 +13,11 @@ const TechnologyCard = ({
   selectedTechnologies,
   setSelectedTechnologies,
 }: ITechnologyCardProps) => {
-  const isSelected = selectedTechnologies.find(
-    (item) => item.id === technology.id,
-  );
+  const isSelected = selectedTechnologies.find((item) => item.id === technology.id);
 
   const handleButtonType = () => {
-    setSelectedTechnologies((currentTechnologies) => [
-      ...currentTechnologies,
+    setSelectedTechnologies([
+      ...selectedTechnologies,
       technology,
     ]);
 
