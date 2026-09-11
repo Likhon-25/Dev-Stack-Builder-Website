@@ -39,7 +39,10 @@ const Technologies = ({ TechnologyPromise }: TechnologyProps) => {
         </div>
 
         <div className="w-full lg:w-80 shrink-0 sticky top-6">
-          <SelectedTechnologyes selectedTechnologies={selectedTechnologies} />
+          <SelectedTechnologyes
+            selectedTechnologies={selectedTechnologies}
+            setSelectedTechnologies={setSelectedTechnologies}
+          />
         </div>
       </div>
     </div>

@@ -17,16 +17,17 @@ const SelectedTechnologyes = ({
     setSelectedTechnologies(removeTech);
   };
 
-  
+  const handleRemoveAll = () => {
+    setSelectedTechnologies([]);
+  };
+
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-      {/* Header */}
       <h2 className="text-lg font-bold text-slate-900">Your Stack</h2>
       <p className="mt-1 text-xs font-medium text-slate-400">
         {selectedTechnologies.length} Technology Selected
       </p>
 
-      {/* Cards List */}
       <div className="mt-5 space-y-3">
         {selectedTechnologies.map((selectTech) => (
           <div
@@ -48,15 +49,20 @@ const SelectedTechnologyes = ({
                 </p>
               </div>
             </div>
-            <FaRegTrashAlt
+            <button
               onClick={() => handleReomveTech(selectTech)}
-              className="text-slate-400 text-base cursor-pointer hover:text-slate-600 transition-colors"
-            />
+              className="p-1 text-slate-400 "
+            >
+              <FaRegTrashAlt className="text-sm" />
+            </button>
           </div>
         ))}
       </div>
 
-      <button className="mt-6 flex w-full items-center justify-center gap-4 rounded-xl border border-rose-200 bg-white py-2.5 text-xs font-semibold text-rose-500 transition-colors hover:bg-rose-50 cursor-pointer">
+      <button
+        onClick={() => handleRemoveAll()}
+        className="mt-6 flex w-full items-center justify-center gap-4 rounded-xl border border-red-500 bg-white py-3 text-xs font-semibold text-red-500  cursor-pointer"
+      >
         <span>Remove All</span>
         <FaRegTrashAlt className="text-sm" />
       </button>
