@@ -1,17 +1,23 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { ITechnology } from "../types/Type";
 import { FaRegTrashAlt } from "react-icons/fa";
-import { RxCross2 } from "react-icons/rx";
-
 interface ISelectedTechnologyesProp {
-  selectedTechnologies: ITechnology;
-  setSelectedTechnologies: Dispatch<SetStateAction<ITechnology>>;
+  selectedTechnologies: ITechnology[];
+  setSelectedTechnologies: Dispatch<SetStateAction<ITechnology[]>>;
 }
 
 const SelectedTechnologyes = ({
   selectedTechnologies,
   setSelectedTechnologies,
 }: ISelectedTechnologyesProp) => {
+  const handleReomveTech = (tech: ITechnology) => {
+    const removeTech = selectedTechnologies.filter(
+      (selectTechnology) => selectTechnology.id !== tech.id,
+    );
+    setSelectedTechnologies(removeTech);
+  };
+
+  
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
       {/* Header */}
@@ -42,9 +48,10 @@ const SelectedTechnologyes = ({
                 </p>
               </div>
             </div>
-
-            {/* Remove Icon */}
-            <FaRegTrashAlt className="text-slate-400 text-base cursor-pointer hover:text-slate-600 transition-colors" />
+            <FaRegTrashAlt
+              onClick={() => handleReomveTech(selectTech)}
+              className="text-slate-400 text-base cursor-pointer hover:text-slate-600 transition-colors"
+            />
           </div>
         ))}
       </div>
