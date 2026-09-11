@@ -10,9 +10,7 @@ interface TechnologyProps {
 const Technologies = ({ TechnologyPromise }: TechnologyProps) => {
   const technologies = use(TechnologyPromise);
 
-  const [selectedTechnologies, setSelectedTechnologies] = useState<
-    ITechnology[]
-  >([]);
+  const [selectedTechnologies, setSelectedTechnologies] = useState<ITechnology[]>([]);
 
   return (
     <div className="container mx-auto px-4 py-8">

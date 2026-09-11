@@ -1,6 +1,7 @@
 import { FaStar } from "react-icons/fa";
 import type { ITechnology } from "../types/Type";
 import type { Dispatch, SetStateAction } from "react";
+import { Bounce, toast } from "react-toastify";
 
 interface ITechnologyCardProps {
   technology: ITechnology;
@@ -12,7 +13,7 @@ const TechnologyCard = ({
   selectedTechnologies,
   setSelectedTechnologies,
 }: ITechnologyCardProps) => {
-  const isSelected = selectedTechnologies.some(
+  const isSelected = selectedTechnologies.find(
     (item) => item.id === technology.id,
   );
 
@@ -21,6 +22,18 @@ const TechnologyCard = ({
       ...currentTechnologies,
       technology,
     ]);
+
+    toast.success(`${technology.name} Add to Stack `, {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
   return (
     <div>

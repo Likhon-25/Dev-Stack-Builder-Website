@@ -1,6 +1,8 @@
 import type { Dispatch, SetStateAction } from "react";
 import type { ITechnology } from "../types/Type";
 import SelectedTechnologyCard from "./SelectedTechnologyCard";
+import { Bounce, toast } from "react-toastify";
+import Technologies from "./Technologies";
 
 interface ISelectedTechnologyesProp {
   selectedTechnologies: ITechnology[];
@@ -16,10 +18,33 @@ const SelectedTechnologyes = ({
       (selectTechnology) => selectTechnology.id !== tech.id,
     );
     setSelectedTechnologies(removeTech);
+    toast.error(`${tech.name} Remove to stack`, {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
 
   const handleRemoveAll = () => {
     setSelectedTechnologies([]);
+    // Tosfify
+    toast.error(`Remove all stack...`, {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
 
   return (
