@@ -2,7 +2,6 @@ import type { Dispatch, SetStateAction } from "react";
 import type { ITechnology } from "../types/Type";
 import SelectedTechnologyCard from "./SelectedTechnologyCard";
 import { Bounce, toast } from "react-toastify";
-import Technologies from "./Technologies";
 
 interface ISelectedTechnologyesProp {
   selectedTechnologies: ITechnology[];

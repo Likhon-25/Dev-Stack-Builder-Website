@@ -82,7 +82,7 @@ const TechnologyCard = ({
           <button
             type="button"
             onClick={handleButtonType}
-            disabled={isSelected}
+            disabled={isSelected ? true : false}
             className={`w-full rounded-xl ${isSelected ? "bg-slate-400" : "bg-slate-900 hover:bg-slate-800"}  py-2.5 text-sm font-semibold text-white transition-colors `}
           >
             {isSelected ? "Added" : "Add to Stack"}
