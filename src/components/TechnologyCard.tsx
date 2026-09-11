@@ -24,9 +24,10 @@ const TechnologyCard = ({
   };
   return (
     <div>
-      <div className= {`rounded-2xl border ${isSelected ? 'border-pink-500' : 'border-slate-200' }  bg-white p-5 shadow-sm hover:shadow-md transition-all`}>
+      <div
+        className={`rounded-2xl border ${isSelected ? "border-pink-500" : "border-slate-200"}  bg-white p-5 shadow-sm hover:shadow-md transition-all`}
+      >
         <div>
-          {/* Top Header: Icon & Badge */}
           <div className="flex items-center justify-between">
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 p-2 border border-slate-100">
               <img
@@ -40,7 +41,6 @@ const TechnologyCard = ({
             </span>
           </div>
 
-          {/* Title & Description */}
           <h3 className="mt-4 text-xl font-bold text-slate-900">
             {technology.name}
           </h3>
@@ -48,7 +48,6 @@ const TechnologyCard = ({
             {technology.description}
           </p>
 
-          {/* Categories, Difficulty & Rating */}
           <div className="mt-6 flex flex-wrap items-center justify-between gap-2 text-xs font-medium text-slate-600">
             <div className="flex items-center gap-1.5 flex-wrap">
               <span className="rounded-md bg-slate-100 px-2.5 py-1 text-slate-700">
@@ -65,7 +64,7 @@ const TechnologyCard = ({
           </div>
         </div>
 
-        {/* Action Button */}
+        {/* Button */}
         <div className="mt-6">
           <button
             type="button"

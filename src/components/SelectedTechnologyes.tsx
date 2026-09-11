@@ -1,18 +1,19 @@
+import type { Dispatch, SetStateAction } from "react";
 import type { ITechnology } from "../types/Type";
 
-interface SelectedTechnologyesProps {
-    selectedTechnologies: ITechnology[];
+interface ISelectedTechnologyesProp {
+    selectedTechnologies: ITechnology
+     setSelectedTechnologies: Dispatch<SetStateAction<ITechnology>>
 }
 
-const SelectedTechnologyes = ({
-    selectedTechnologies,
-}: SelectedTechnologyesProps) => {
+
+const SelectedTechnologyes = ({selectedTechnologies,setSelectedTechnologies} : ISelectedTechnologyesProp ) => {
     return (
         <div>
-                        <h2>Selected Technologies</h2>
-                        {selectedTechnologies.map((technology) => (
-                                <p key={technology.id}>{technology.name}</p>
-                        ))}
+            <h2>Selected Technologies</h2>
+            <p>{selectedTechnologies.length}</p>
+           
+                       
         </div>
     );
 };
